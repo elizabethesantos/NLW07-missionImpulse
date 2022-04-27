@@ -25,6 +25,6 @@ model Message {
 
   user User @relation(fields: [user_id], references: [id])
 
-  userId String
+  user_id String
   @@map("messages")
 }

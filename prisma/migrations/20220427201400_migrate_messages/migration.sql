@@ -3,6 +3,6 @@ CREATE TABLE "messages" (
     "id" TEXT NOT NULL PRIMARY KEY,
     "text" TEXT NOT NULL,
     "create_at" DATETIME NOT NULL DEFAULT CURRENT_TIMESTAMP,
-    "userId" TEXT NOT NULL,
-    CONSTRAINT "messages_userId_fkey" FOREIGN KEY ("userId") REFERENCES "users" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
+    "user_id" TEXT NOT NULL,
+    CONSTRAINT "messages_user_id_fkey" FOREIGN KEY ("user_id") REFERENCES "users" ("id") ON DELETE RESTRICT ON UPDATE CASCADE
 );
