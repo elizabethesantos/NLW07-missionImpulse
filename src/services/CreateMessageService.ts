@@ -5,7 +5,7 @@ class CreateMessageService {
     const message = await prismaClient.message.create({
       data : {
         text,
-        userId,
+        user_id,
       },
       include: {
         user : true,
