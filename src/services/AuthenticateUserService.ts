@@ -34,9 +34,9 @@ class AuthenticateUserService {
         code,
       },
       headers: {
-        "Accept": "application/json"
+        Accept: "application/json"
       },   
-    })
+    });
 
     const response = await axios.get<IUserResponse>(
       "https://api.github.com/user",
@@ -47,13 +47,13 @@ class AuthenticateUserService {
       }
     );
 
-    const {login, id, avatar_url, name} = response.data
+    const {login, id, avatar_url, name} = response.data;
 
     let user = await prismaClient.user.findFirst({ 
       where: { 
         github_id: id,
-      }
-    })
+      },
+    });
 
     if(!user){
       user = await prismaClient.user.create({
@@ -77,7 +77,7 @@ class AuthenticateUserService {
       process.env.JWT_SECRET,
       {
         subject: user.id,
-        expiresIn:"1d"
+        expiresIn:"1d",
       }
     )
 
