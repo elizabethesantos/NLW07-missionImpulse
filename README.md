@@ -15,5 +15,5 @@
 
 ##
 
-<img align="center" alt="Elizabeth-Js" height="400" width="800" src="https://github.com/elizabethesantos/NLW07-missionImpulse/blob/main/nwl07.jpeg">
+<img align="center" alt="Elizabeth-Js" height="400" width="800" src="https://github.com/elizabethesantos/NLW07-missionImpulse/blob/main/NLW07.jpeg">
 
